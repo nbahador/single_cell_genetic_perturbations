@@ -71,3 +71,70 @@ This pipeline visualizes the underlying structure (manifold) of gene expression 
 
 ---
 ***
+
+# Differential Manifold Mapping of Control vs. Perturbed Single-Cell States
+
+This analysis pipeline processes single-cell gene expression data to visualize and compare the effects of genetic perturbations.
+
+## Cell Classification
+
+| **Group** | **Definition** | **Purpose** |
+|-----------|----------------|-------------|
+| **Control cells** | Cells with 'non-targeting' perturbations | Baseline/reference group |
+| **Perturbed cells** | Cells with specific genetic perturbations | Treatment group for comparison |
+
+## Dimensionality Reduction Pipeline
+
+To visualize high-dimensional gene expression data, we reduce it to 2D/3D using a two-step approach:
+
+### A. Principal Component Analysis (PCA)
+
+| **Parameter** | **Value** | **Purpose** |
+|---------------|-----------|-------------|
+| **Components** | Top 50 (n_pca=50) | Capture most variance in the data |
+| **Scope** | All cells together | Ensure comparable coordinates |
+| **Function** | Identifies main axes of variation | Provides initial dimensionality reduction |
+
+### B. UMAP (Uniform Manifold Approximation and Projection)
+
+| **Parameter** | **Value** | **Purpose** |
+|---------------|-----------|-------------|
+| **Input dimensions** | 50 PCA components | From previous PCA step |
+| **Output dimensions** | 3D (n_umap=3) | Final visualization space |
+| **n_neighbors** | 30 | Balances local vs global structure |
+| **min_dist** | 0.1 | Controls how tightly points are packed |
+| **Scope** | All cells together | Maintains consistency across groups |
+
+## Statistical Comparison Analysis
+
+### Density Estimation
+- **Method**: Gaussian Kernel Density Estimation (KDE)
+- **Purpose**: Estimate probability density of control and perturbed cells
+- **Output**: Smooth maps showing concentration of each group
+
+### Density Differences
+- **Calculation**: Subtract control density from perturbed density at each point
+- **Significance threshold**: Top 5% of absolute values marked as significant
+- **Visualization**:
+  - **Red regions**: Higher density in perturbed vs control
+  - **Blue regions**: Higher density in control vs perturbed
+  - **Black dots**: Statistically significant differences
+
+## Interpretation
+
+| **Analysis Component** | **What It Shows** |
+|------------------------|-------------------|
+| **3D UMAP space** | Where perturbed cells concentrate differently from controls |
+| **2D heatmap** | Summary view of distribution differences |
+| **Contour lines** | Statistically significant regions (p < 0.05) |
+
+## Resources
+
+### Figure
+![2D Density Difference Map](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Differential_Manifold_Mapping_of_Control_vs._Perturbed_Single-Cell_States/Differential_Manifold.jpg)
+
+### Interactive Visualization
+[Interactive Manifold Comparison Report](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Differential_Manifold_Mapping_of_Control_vs._Perturbed_Single-Cell_States/manifold_comparison_report.html)
+
+---
+***
