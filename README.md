@@ -138,3 +138,67 @@ To visualize high-dimensional gene expression data, we reduce it to 2D/3D using 
 
 ---
 ***
+
+# Genetic Perturbation Effect Analysis
+
+> This pipeline visualizes and analyzes the effects of genetic perturbations on single-cell gene expression profiles.
+
+| Feature | Description |
+|---------|-------------|
+| **UMAP Positioning** | Reveals similarity in gene expression changes - cells with similar perturbation responses cluster together |
+| **Effect Magnitude** | Quantifies how strongly each perturbation modifies the overall expression landscape |
+| **Gene-Level Changes** | Identifies which specific genes are most significantly affected by each perturbation |
+
+## Applications
+
+<div align="center">
+
+| **Mechanistic Insights** | **Hit Prioritization** | **Gene Function Prediction** |
+|:------------------------:|:----------------------:|:----------------------------:|
+| Discover perturbations with similar molecular effects through clustering analysis | Rank perturbations by their overall impact magnitude for compound screening | Identify genes that consistently co-regulate across different perturbations |
+
+</div>
+
+## Analysis Workflow
+
+### 1. Perturbation Effect Calculation
+- **Differential Expression Analysis**: Computes expression deltas between perturbed and control (non-targeting) cells
+- **Effect Magnitude Quantification**: Measures perturbation strength using L2 norm of delta expression vectors  
+- **Gene Prioritization**: Identifies top up- and down-regulated genes for each perturbation condition
+
+### 2. 3D Manifold Visualization
+An interactive 3D UMAP projection revealing perturbation landscapes:
+
+| Element | Representation |
+|---------|----------------|
+| **Points** | Individual cells in expression space |
+| **Position** | UMAP coordinates based on expression change similarity |
+| **Color** | Perturbation effect magnitude (viridis colormap) |
+| **Size** | Effect strength (larger points = stronger perturbations) |
+| **Interactivity** | Hover details: cell ID, perturbation type, effect size, top changed genes |
+
+**Features**: Dropdown filtering by specific perturbations for focused analysis
+
+### 3. Differential Expression Heatmap
+Overview of gene expression changes across all perturbations:
+- **Rows**: Individual perturbations
+- **Columns**: Top differentially expressed genes
+- **Color Scale**: Mean delta expression (red = upregulation, blue = downregulation)
+
+### 4. Effect Magnitude Profiling
+Statistical summary showing mean ± standard deviation of perturbation effect sizes across conditions.
+
+## Visualizations
+![Perturbation Effects on Gene Expression Changes](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/perturbation_effects_on_gene_expression/perturbation_effect_on_gene_expression_changes.jpg)
+
+*Visualization showing the impact of genetic perturbations on cellular gene expression profiles*
+
+### Interactive Visualizations
+
+| Visualization Type | Preview | Link |
+|-------------------|---------|------|
+| **3D Manifold Explorer** | [**Launch Interactive 3D Manifold**](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/perturbation_effects_on_gene_expression/enhanced_delta_manifold.html) | Explore perturbation effects in 3D expression space with hover details and filtering |
+| **Expression Heatmap** | [**Open Interactive Heatmap**](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/perturbation_effects_on_gene_expression/top_genes_heatmap.html) | Interactive heatmap of top differentially expressed genes across all perturbations |
+
+---
+***
