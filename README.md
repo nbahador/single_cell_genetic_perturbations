@@ -1,6 +1,6 @@
 # Virtual Cell Challenge 2025 Codebase and Pipelines
 
-This repository serves as a comprehensive collection of all codebases and analysis pipelines developed as part of the Virtual Cell Challenge 2025.
+This repository serves as a collection of all codebases and analysis pipelines developed as part of the Virtual Cell Challenge 2025.
 
 ---
 ***
