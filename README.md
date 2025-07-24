@@ -139,7 +139,7 @@ To visualize high-dimensional gene expression data, we reduce it to 2D/3D using 
 ---
 ***
 
-# Genetic Perturbation Effect Analysis
+# Perturbation Effects on Gene Expression
 
 > This pipeline visualizes and analyzes the effects of genetic perturbations on single-cell gene expression profiles.
 
