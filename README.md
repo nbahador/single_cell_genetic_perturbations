@@ -72,7 +72,8 @@ This pipeline visualizes the underlying structure (manifold) of gene expression 
 ---
 ***
 
-# Differential Manifold Mapping of Control vs. Perturbed Single-Cell States
+# Differential Manifold Pipeline:
+# Mapping of Control vs. Perturbed Single-Cell States
 
 This analysis pipeline processes single-cell gene expression data to visualize and compare the effects of genetic perturbations.
 
