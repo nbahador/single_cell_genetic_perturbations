@@ -202,3 +202,68 @@ Statistical summary showing mean ± standard deviation of perturbation effect si
 
 ---
 ***
+
+# Transcriptomic Impact of Gene Perturbations Analysis Pipeline
+
+## Core Goal
+
+The primary aim of this analysis pipeline is to quantify the effect of individual gene perturbations on the transcriptome, focusing on identifying genes that become significantly upregulated or downregulated in response to each perturbation.
+
+## Purpose of the Pipeline
+
+This code is designed to summarize and visualize how different gene perturbations impact global gene expression. It helps answer key questions such as:
+
+- How many genes are significantly altered by each perturbation?
+- Are the changes primarily upregulation or downregulation of gene expression?
+- What is the distribution of effect sizes—are the changes mostly modest or do some perturbations cause extreme shifts?
+- How does a perturbation's strength (maximum effect size) relate to its breadth (number of significantly affected genes)?
+
+Through these analyses, the pipeline characterizes the diversity of transcriptional responses triggered by different perturbations, reflecting their mechanisms of action and potency.
+
+## Key Analytical Outputs
+
+### Number of Significantly Affected Genes per Perturbation
+
+Quantifies the total number of genes whose expression significantly changes due to each gene perturbation. Helps distinguish between strong, broad regulators and weak or targeted perturbations.
+
+### Counts of Upregulated vs. Downregulated Genes
+
+Shows the directionality of the effect: Does a perturbation mainly activate or suppress gene expression? This can reflect the biological role of the perturbed gene (e.g., activator vs. repressor).
+
+### Effect Size Distributions
+
+Examines the magnitude of transcriptional changes. Distributions are often bell-shaped or skewed, showing that:
+
+- Most genes change modestly
+- A few genes may experience extreme upregulation or downregulation, suggesting strong regulatory control
+
+This helps identify master regulators or genes with broad vs. narrow influence.
+
+### Strength vs. Coverage Plot
+
+Plots the maximum effect size (strength) against the number of significantly affected genes (coverage). Bigger dots represent perturbations supported by more cell data, indicating higher confidence.
+
+This plot reveals categories of perturbations:
+
+- **Broad but modest** (many genes, small changes)
+- **Focused but potent** (few genes, large changes)
+- **Globally strong** (many genes, large changes)
+
+## Interpretation and Insights
+
+- Stronger or broader perturbations generally lead to more significant gene expression changes
+- Perturbations can be grouped based on their transcriptional impact patterns
+- Some perturbations show balanced effects, while others exhibit asymmetry, mainly activating or suppressing downstream genes
+- By comparing gene expression in perturbed vs. control cells, the pipeline helps uncover gene regulatory roles and potential pathways involved
+- The diversity in responses reflects the underlying biology and mechanisms of action of each gene perturbation
+
+## Visualizations
+
+### Static Figure
+![Transcriptomic Impact Analysis](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Transcriptomic_Impact_of_Gene_Perturbations/img.png)
+
+### Interactive Visualization
+[Interactive Perturbation Summary](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Transcriptomic_Impact_of_Gene_Perturbations/perturbation_summary.html)
+
+---
+***
