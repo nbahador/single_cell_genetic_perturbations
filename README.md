@@ -267,3 +267,71 @@ This plot reveals categories of perturbations:
 
 ---
 ***
+
+# Perturbation Effect Quantification Pipeline
+
+## Overview
+
+This pipeline is designed to:
+- Quantify how genetic perturbations alter these states
+- Identify which perturbations have the strongest/most specific effects
+- Discover genes that are most responsive to each perturbation
+
+## Data
+
+- **Gene expression matrix** (cells x genes)
+- **Perturbation targets** (which gene was targeted in each cell)
+
+## Workflow
+
+### 1. Data Preprocessing
+Creating representative subset of cells with balanced representation from all perturbations
+
+### 2. Dimensionality Reduction
+- Uses **IncrementalPCA** (memory-efficient) to reduce to 50 dimensions
+- Then applies **UMAP** to create a 2D visualization of cellular states
+
+### 3. Clustering
+- Uses **HDBSCAN** (or DBSCAN if HDBSCAN not available) to identify cellular clusters
+- Calculates cluster properties (center, size, median expression)
+
+### 4. Perturbation Effect Analysis
+Compares each perturbation to control ("non-targeting") cells
+
+Calculates:
+- Displacement vector/magnitude from control center
+- Dispersion of perturbed cells
+- Cluster distribution of perturbed cells
+- Differential gene expression signature
+
+## Visualization
+
+Creates multiple interactive visualizations:
+- **Cellular Landscape**: UMAP with clusters and perturbation effects
+- **Perturbation Effects**: Effect size vs dispersion, cluster distributions
+- **Cluster Analysis**: Size, composition, and characteristics
+- **Gene Expression**: Heatmap of top variable genes
+
+Hover Info on Data Points:
+When you hover over a data point in the interactive dashboard, you'll see:
+- **Top 5 most highly expressed genes in that cell (+ expression values)**
+- **Median expression of top genes in the cluster**
+- **Effect size (magnitude of displacement from control)**
+- **Top differentially expressed genes (up/downregulated)**
+- **Effect size (displacement magnitude)**
+- **Dispersion (how spread out the cells are)**
+- **Log-fold change (perturbation vs. control)**
+
+## Results
+
+### Figures
+![Perturbation Effect Visualization](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Perturbation_Effect_Quantification/Perturbation%20Effect%20Visualisation.png)
+
+![Perturbation Effect Visualization II](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Perturbation_Effect_Quantification/Perturbation%20Effect%20Visualisation%20II.png)
+
+### Interactive Dashboards
+- [Cellular Landscape Dashboard](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Perturbation_Effect_Quantification/cellular_landscape.html)
+- [Perturbation Effects Dashboard](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Perturbation_Effect_Quantification/perturbation_effects.html)
+
+---
+***
