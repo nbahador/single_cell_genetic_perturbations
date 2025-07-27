@@ -330,9 +330,7 @@ When you hover over a data point in the interactive dashboard, you'll see:
 
 ### Interactive Dashboards
 - [Cellular Landscape Dashboard](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Perturbation_Effect_Quantification/cellular_landscape.html)
-
----
-***
+- [Perturbation Effects Dashboard](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Perturbation_Effect_Quantification/perturbation_effects.html)
 
 ---
 ***
@@ -377,7 +375,4 @@ Interactive 3D/2D plots of optimization dynamics per epoch with hover tools show
 
 ---
 ***
-- [Perturbation Effects Dashboard](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Perturbation_Effect_Quantification/perturbation_effects.html)
 
----
-***
