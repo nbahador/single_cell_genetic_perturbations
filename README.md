@@ -2,49 +2,6 @@
 
 This repository serves as a collection of all codebases and analysis pipelines developed as part of the Virtual Cell Challenge 2025.
 
-
-
----
-***
-
-# Autoencoder Pipeline for Single-Cell Gene Expression Analysis
-
-This pipeline implements an autoencoder for analyzing single-cell gene expression data and tracking the optimization trajectory (weights, gradients, losses, latent representations). The deep neural network with encoder-decoder architecture reduces dimensions to a latent space.
-
-## Autoencoder Architecture
-
-### Encoder
-4-layer NN (input → 512 → 256 → 128 → latent dim) with LeakyReLU, dropout, and batch norm.
-
-### Decoder
-Mirrors the encoder. Trained to minimize MSE reconstruction loss.
-
-## Dimensionality Reduction
-
-- **PCA**: Used to visualize high-dimensional weight trajectories
-- **UMAP**: Projects latent spaces into 2D/3D for visualization
-
-## Optimization Tracking
-
-- Records weights, gradients, losses, and latent representations at each epoch
-- Implements early stopping and learning rate reduction on plateau
-
-## Visualization
-
-Interactive 3D/2D plots of optimization dynamics per epoch with hover tools showing metadata:
-- Parameter space trajectory (PCA of weights)
-- Latent space (UMAP projections)
-- Training/validation loss curves
-- Perturbation effects (colored by target gene)
-
-## Results
-
-### Figure
-![Parameter and Latent Space](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Autoencoder_Pipeline/Parameter%20and%20Latent%20space.png)
-
-### Interactive Visualization
-[Optimization Epoch 95 Dashboard](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Autoencoder_Pipeline/optimization_epoch_95.html)
-
 ---
 ***
 
@@ -373,6 +330,53 @@ When you hover over a data point in the interactive dashboard, you'll see:
 
 ### Interactive Dashboards
 - [Cellular Landscape Dashboard](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Perturbation_Effect_Quantification/cellular_landscape.html)
+
+---
+***
+
+---
+***
+
+# Autoencoder Pipeline for Single-Cell Gene Expression Analysis
+
+This pipeline implements an autoencoder for analyzing single-cell gene expression data and tracking the optimization trajectory (weights, gradients, losses, latent representations). The deep neural network with encoder-decoder architecture reduces dimensions to a latent space.
+
+## Autoencoder Architecture
+
+### Encoder
+4-layer NN (input → 512 → 256 → 128 → latent dim) with LeakyReLU, dropout, and batch norm.
+
+### Decoder
+Mirrors the encoder. Trained to minimize MSE reconstruction loss.
+
+## Dimensionality Reduction
+
+- **PCA**: Used to visualize high-dimensional weight trajectories
+- **UMAP**: Projects latent spaces into 2D/3D for visualization
+
+## Optimization Tracking
+
+- Records weights, gradients, losses, and latent representations at each epoch
+- Implements early stopping and learning rate reduction on plateau
+
+## Visualization
+
+Interactive 3D/2D plots of optimization dynamics per epoch with hover tools showing metadata:
+- Parameter space trajectory (PCA of weights)
+- Latent space (UMAP projections)
+- Training/validation loss curves
+- Perturbation effects (colored by target gene)
+
+## Results
+
+### Figure
+![Parameter and Latent Space](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Autoencoder_Pipeline/Parameter%20and%20Latent%20space.png)
+
+### Interactive Visualization
+[Optimization Epoch 95 Dashboard](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Autoencoder_Pipeline/optimization_epoch_95.html)
+
+---
+***
 - [Perturbation Effects Dashboard](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Perturbation_Effect_Quantification/perturbation_effects.html)
 
 ---
