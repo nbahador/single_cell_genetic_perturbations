@@ -312,7 +312,6 @@ Creates multiple interactive visualizations:
 - **Cluster Analysis**: Size, composition, and characteristics
 - **Gene Expression**: Heatmap of top variable genes
 
-Hover Info on Data Points:
 When you hover over a data point in the interactive dashboard, you'll see:
 - **Top 5 most highly expressed genes in that cell (+ expression values)**
 - **Median expression of top genes in the cluster**
