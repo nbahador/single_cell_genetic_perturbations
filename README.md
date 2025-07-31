@@ -368,10 +368,10 @@ Interactive 3D/2D plots of optimization dynamics per epoch with hover tools show
 ## Results
 
 ### Figure
-![Parameter and Latent Space](https://nbahador.github.io/single_cell_genetic_perturbations/Autoencoder_Pipeline/Parameter%20and%20Latent%20space.png)
+![Parameter and Latent Space](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Autoencoder_Pipeline/Parameter%20and%20Latent%20space.png)
 
 ### Interactive Visualization
-[Optimization Epoch 95 Dashboard](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Autoencoder_Pipeline/optimization_epoch_95.html)
+[Optimization Epoch 95 Dashboard](https://nbahador.github.io/single_cell_genetic_perturbations/Autoencoder_Pipeline/optimization_epoch_95.html)
 
 ---
 ***
