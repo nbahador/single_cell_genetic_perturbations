@@ -58,7 +58,7 @@ This pipeline visualizes the underlying structure (manifold) of gene expression 
 ![Manifold Visualization](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Manifold_Visualization_Pipeline/Manifold_Visualization_Fig.jpg)
 
 ### Interactive Visualization
-[Interactive Manifold Visualizations](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Manifold_Visualization_Pipeline/manifold_visualizations.html)
+[Interactive Manifold Visualizations](https://nbahador.github.io/single_cell_genetic_perturbations/Manifold_Visualization_Pipeline/manifold_visualizations.html)
 
 ## Technical Details
 
@@ -134,7 +134,7 @@ To visualize high-dimensional gene expression data, we reduce it to 2D/3D using 
 ![2D Density Difference Map](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Differential_Manifold_Mapping_of_Control_vs._Perturbed_Single-Cell_States/Differential_Manifold.jpg)
 
 ### Interactive Visualization
-[Interactive Manifold Comparison Report](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Differential_Manifold_Mapping_of_Control_vs._Perturbed_Single-Cell_States/manifold_comparison_report.html)
+[Interactive Manifold Comparison Report](https://nbahador.github.io/single_cell_genetic_perturbations/Differential_Manifold_Mapping_of_Control_vs._Perturbed_Single-Cell_States/manifold_comparison_report.html)
 
 ---
 ***
@@ -197,8 +197,8 @@ Statistical summary showing mean ± standard deviation of perturbation effect si
 
 | Visualization Type | Preview | Link |
 |-------------------|---------|------|
-| **3D Manifold Explorer** | [**Launch Interactive 3D Manifold**](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/perturbation_effects_on_gene_expression/enhanced_delta_manifold.html) | Explore perturbation effects in 3D expression space with hover details and filtering |
-| **Expression Heatmap** | [**Open Interactive Heatmap**](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/perturbation_effects_on_gene_expression/top_genes_heatmap.html) | Interactive heatmap of top differentially expressed genes across all perturbations |
+| **3D Manifold Explorer** | [**Launch Interactive 3D Manifold**](https://nbahador.github.io/single_cell_genetic_perturbations/perturbation_effects_on_gene_expression/enhanced_delta_manifold.html) | Explore perturbation effects in 3D expression space with hover details and filtering |
+| **Expression Heatmap** | [**Open Interactive Heatmap**](https://nbahador.github.io/single_cell_genetic_perturbations/perturbation_effects_on_gene_expression/top_genes_heatmap.html) | Interactive heatmap of top differentially expressed genes across all perturbations |
 
 ---
 ***
@@ -263,7 +263,7 @@ This plot reveals categories of perturbations:
 ![Transcriptomic Impact Analysis](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Transcriptomic_Impact_of_Gene_Perturbations/img.png)
 
 ### Interactive Visualization
-[Interactive Perturbation Summary](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Transcriptomic_Impact_of_Gene_Perturbations/perturbation_summary.html)
+[Interactive Perturbation Summary](https://nbahador.github.io/single_cell_genetic_perturbations/Transcriptomic_Impact_of_Gene_Perturbations/perturbation_summary.html)
 
 ---
 ***
@@ -329,8 +329,8 @@ When you hover over a data point in the interactive dashboard, you'll see:
 ![Perturbation Effect Visualization II](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Perturbation_Effect_Quantification/Perturbation%20Effect%20Visualisation%20II.png)
 
 ### Interactive Dashboards
-- [Cellular Landscape Dashboard](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Perturbation_Effect_Quantification/cellular_landscape.html)
-- [Perturbation Effects Dashboard](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Perturbation_Effect_Quantification/perturbation_effects.html)
+- [Cellular Landscape Dashboard](https://nbahador.github.io/single_cell_genetic_perturbations/Perturbation_Effect_Quantification/cellular_landscape.html)
+- [Perturbation Effects Dashboard](https://nbahador.github.io/single_cell_genetic_perturbations/Perturbation_Effect_Quantification/perturbation_effects.html)
 
 ---
 ***
@@ -368,7 +368,7 @@ Interactive 3D/2D plots of optimization dynamics per epoch with hover tools show
 ## Results
 
 ### Figure
-![Parameter and Latent Space](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Autoencoder_Pipeline/Parameter%20and%20Latent%20space.png)
+![Parameter and Latent Space](https://nbahador.github.io/single_cell_genetic_perturbations/Autoencoder_Pipeline/Parameter%20and%20Latent%20space.png)
 
 ### Interactive Visualization
 [Optimization Epoch 95 Dashboard](https://github.com/nbahador/single_cell_genetic_perturbations/blob/main/Autoencoder_Pipeline/optimization_epoch_95.html)
